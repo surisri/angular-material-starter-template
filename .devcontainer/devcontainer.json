@@ -1,0 +1,23 @@
+{
+  "name": "Angular App",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick a Node.js version: 10, 12
+    "args": { "VARIANT": "16" }
+  },
+  "forwardPorts": [7071, 4200, 4280, 9323],
+  "portsAttributes": {
+    "4200": {
+      "label": "Angular App"
+    }
+  }  
+  },
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "npm install",
+  "postCreateCommand": "(npm install) ; ",
+  // "postStartCommand": "(npm run start) & (npm run local)",
+
+  // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node"
+}
