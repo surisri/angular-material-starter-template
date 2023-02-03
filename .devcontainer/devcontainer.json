@@ -10,7 +10,7 @@
     "4200": {
       "label": "Angular App"
     }
-  }  
+  
   },
 
   // Use 'postCreateCommand' to run commands after the container is created.
